@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="47" width="390" height="763"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="132" id="npk-WP-JTw">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CryptoCell" rowHeight="132" id="npk-WP-JTw" customClass="CryptoCell" customModule="Crypto4FunUIKit" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="390" height="132"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="npk-WP-JTw" id="ZiY-Vx-hmJ">
@@ -50,6 +50,10 @@
                                                 <constraint firstItem="RA3-CU-lzG" firstAttribute="leading" secondItem="ZiY-Vx-hmJ" secondAttribute="leading" constant="8" id="q9f-tS-OBx"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="CryptoImageView" destination="ZiY-Vx-hmJ" id="TMU-RH-UVT"/>
+                                            <outlet property="cryptoNameLabel" destination="pZg-Bt-nuH" id="Izh-MS-eM1"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
