@@ -9,7 +9,7 @@ import UIKit
 
 class CryptoCell: UITableViewCell {
 
-	@IBOutlet weak var cryptoImageView: UIView!
+	@IBOutlet weak var cryptoImageView: UIImageView!
 	@IBOutlet weak var cryptoNameLabel: UILabel!
 	
 

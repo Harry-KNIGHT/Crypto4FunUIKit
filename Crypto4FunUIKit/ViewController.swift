@@ -35,7 +35,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
 		// Image doesn't appear in simulator.
 		if let imageName = currentCrypto.imageName {
-			cell.cryptoImageView.largeContentImage = UIImage(named: imageName)
+			cell.cryptoImageView.image = UIImage(named: imageName)
 		}
 		return cell
 	}

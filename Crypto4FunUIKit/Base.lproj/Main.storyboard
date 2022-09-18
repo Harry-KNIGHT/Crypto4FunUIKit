@@ -27,31 +27,32 @@
                                             <rect key="frame" x="0.0" y="0.0" width="390" height="132"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RA3-CU-lzG">
-                                                    <rect key="frame" x="8" y="8" width="116" height="116"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" secondItem="RA3-CU-lzG" secondAttribute="height" multiplier="1:1" id="wME-oK-TH5"/>
-                                                    </constraints>
-                                                </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pZg-Bt-nuH">
                                                     <rect key="frame" x="140" y="8" width="242" height="116"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Zkw-cy-fEj">
+                                                    <rect key="frame" x="8" y="8" width="116" height="116"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="Zkw-cy-fEj" secondAttribute="height" multiplier="1:1" id="BYY-4l-jlT"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="pZg-Bt-nuH" secondAttribute="trailing" constant="8" id="1Ka-nK-aKQ"/>
-                                                <constraint firstItem="pZg-Bt-nuH" firstAttribute="leading" secondItem="RA3-CU-lzG" secondAttribute="trailing" constant="16" id="ATA-88-LIT"/>
-                                                <constraint firstItem="RA3-CU-lzG" firstAttribute="top" secondItem="ZiY-Vx-hmJ" secondAttribute="top" constant="8" id="fH5-yG-qHg"/>
-                                                <constraint firstAttribute="bottom" secondItem="RA3-CU-lzG" secondAttribute="bottom" constant="8" id="hHu-Y4-uCW"/>
+                                                <constraint firstItem="Zkw-cy-fEj" firstAttribute="leading" secondItem="ZiY-Vx-hmJ" secondAttribute="leading" constant="8" id="MrQ-7v-LOf"/>
+                                                <constraint firstItem="Zkw-cy-fEj" firstAttribute="top" secondItem="ZiY-Vx-hmJ" secondAttribute="top" constant="8" id="P6h-PY-eCA"/>
                                                 <constraint firstAttribute="bottom" secondItem="pZg-Bt-nuH" secondAttribute="bottom" constant="8" id="jds-zW-Phw"/>
+                                                <constraint firstAttribute="bottom" secondItem="Zkw-cy-fEj" secondAttribute="bottom" constant="8" id="l45-LS-Y43"/>
+                                                <constraint firstItem="pZg-Bt-nuH" firstAttribute="leading" secondItem="Zkw-cy-fEj" secondAttribute="trailing" constant="16" id="o2m-1i-6mM"/>
                                                 <constraint firstItem="pZg-Bt-nuH" firstAttribute="top" secondItem="ZiY-Vx-hmJ" secondAttribute="top" constant="8" id="q3F-6h-i29"/>
-                                                <constraint firstItem="RA3-CU-lzG" firstAttribute="leading" secondItem="ZiY-Vx-hmJ" secondAttribute="leading" constant="8" id="q9f-tS-OBx"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="CryptoImageView" destination="ZiY-Vx-hmJ" id="TMU-RH-UVT"/>
+                                            <outlet property="cryptoImageView" destination="Zkw-cy-fEj" id="vDH-eG-C9e"/>
                                             <outlet property="cryptoNameLabel" destination="pZg-Bt-nuH" id="Izh-MS-eM1"/>
                                         </connections>
                                     </tableViewCell>
