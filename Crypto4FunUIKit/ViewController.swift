@@ -6,9 +6,10 @@
 //
 
 import UIKit
+import Crypto4FunKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-	var cryptos: [CryptoModel] = []
+	var cryptos = [CryptoCurrencyModel]()
 
 	@IBOutlet weak var tableView: UITableView!
 
@@ -16,11 +17,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 		super.viewDidLoad()
 		// Do any additional setup after loading the view.
 
-		let crypto0 = CryptoModel(imageName: "crypto0", name: "Bitcoin")
-		let crypto1 = CryptoModel(imageName: "crypto1", name: "Ethereum")
-		let crypto2 = CryptoModel(imageName: nil, name: "BNB")
-
-		cryptos = [crypto0, crypto1, crypto2]
+		Task {
+			do {
+				try await getCryptos()
+			} catch {
+				print("Error in viewDidLoad")
+			}
+		}
 	}
 
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -32,14 +35,19 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
 		let currentCrypto = cryptos[indexPath.row]
 		cell.cryptoNameLabel.text = currentCrypto.name
-
-		// Image doesn't appear in simulator.
-		if let imageName = currentCrypto.imageName {
-			cell.cryptoImageView.image = UIImage(named: imageName)
+		if let urlImage = URL(string: currentCrypto.image) {
+			cell.cryptoImageView.load(url: urlImage)
 		}
+		
 		return cell
 	}
 
+	func getCryptos() async throws {
+		do {
+			cryptos = try await CryptoApi.fetchCryptoCurrency()
+			tableView.reloadData()
+		} catch {
+			print("Error fetching data")
+		}
+	}
 }
-
-
