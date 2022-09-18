@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3C406FE728D70F8900678546 /* CryptoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C406FE628D70F8900678546 /* CryptoModel.swift */; };
+		3C1F2F7B28D7AC8D007783C0 /* Crypto4FunKit in Frameworks */ = {isa = PBXBuildFile; productRef = 3C1F2F7A28D7AC8D007783C0 /* Crypto4FunKit */; };
+		3C1F2F7D28D7AD99007783C0 /* ExtensionUIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1F2F7C28D7AD99007783C0 /* ExtensionUIImageView.swift */; };
 		3CCF0DB828D310A1002D18CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCF0DB728D310A1002D18CA /* AppDelegate.swift */; };
 		3CCF0DBA28D310A1002D18CA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCF0DB928D310A1002D18CA /* SceneDelegate.swift */; };
 		3CCF0DBC28D310A1002D18CA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCF0DBB28D310A1002D18CA /* ViewController.swift */; };
@@ -18,7 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3C406FE628D70F8900678546 /* CryptoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoModel.swift; sourceTree = "<group>"; };
+		3C1F2F7C28D7AD99007783C0 /* ExtensionUIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIImageView.swift; sourceTree = "<group>"; };
 		3CCF0DB428D310A1002D18CA /* Crypto4FunUIKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Crypto4FunUIKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CCF0DB728D310A1002D18CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3CCF0DB928D310A1002D18CA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -35,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C1F2F7B28D7AC8D007783C0 /* Crypto4FunKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,7 +65,7 @@
 				3CCF0DB728D310A1002D18CA /* AppDelegate.swift */,
 				3CCF0DB928D310A1002D18CA /* SceneDelegate.swift */,
 				3CCF0DBB28D310A1002D18CA /* ViewController.swift */,
-				3C406FE628D70F8900678546 /* CryptoModel.swift */,
+				3C1F2F7C28D7AD99007783C0 /* ExtensionUIImageView.swift */,
 				3CCF0DBD28D310A1002D18CA /* Main.storyboard */,
 				3CD35AF728D5F40400662AC3 /* CryptoCell.swift */,
 				3CCF0DC028D310A1002D18CA /* Assets.xcassets */,
@@ -89,6 +91,9 @@
 			dependencies = (
 			);
 			name = Crypto4FunUIKit;
+			packageProductDependencies = (
+				3C1F2F7A28D7AC8D007783C0 /* Crypto4FunKit */,
+			);
 			productName = Crypto4FunUIKit;
 			productReference = 3CCF0DB428D310A1002D18CA /* Crypto4FunUIKit.app */;
 			productType = "com.apple.product-type.application";
@@ -117,6 +122,9 @@
 				Base,
 			);
 			mainGroup = 3CCF0DAB28D310A1002D18CA;
+			packageReferences = (
+				3C1F2F7928D7AC8D007783C0 /* XCRemoteSwiftPackageReference "Crypto4FunKit" */,
+			);
 			productRefGroup = 3CCF0DB528D310A1002D18CA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -144,11 +152,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C1F2F7D28D7AD99007783C0 /* ExtensionUIImageView.swift in Sources */,
 				3CD35AF828D5F40400662AC3 /* CryptoCell.swift in Sources */,
 				3CCF0DBC28D310A1002D18CA /* ViewController.swift in Sources */,
 				3CCF0DB828D310A1002D18CA /* AppDelegate.swift in Sources */,
 				3CCF0DBA28D310A1002D18CA /* SceneDelegate.swift in Sources */,
-				3C406FE728D70F8900678546 /* CryptoModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,6 +374,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3C1F2F7928D7AC8D007783C0 /* XCRemoteSwiftPackageReference "Crypto4FunKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Harry-KNIGHT/Crypto4FunKit";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3C1F2F7A28D7AC8D007783C0 /* Crypto4FunKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3C1F2F7928D7AC8D007783C0 /* XCRemoteSwiftPackageReference "Crypto4FunKit" */;
+			productName = Crypto4FunKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3CCF0DAC28D310A1002D18CA /* Project object */;
 }
