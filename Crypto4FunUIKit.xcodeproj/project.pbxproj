@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C406FE728D70F8900678546 /* CryptoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C406FE628D70F8900678546 /* CryptoModel.swift */; };
 		3CCF0DB828D310A1002D18CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCF0DB728D310A1002D18CA /* AppDelegate.swift */; };
 		3CCF0DBA28D310A1002D18CA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCF0DB928D310A1002D18CA /* SceneDelegate.swift */; };
 		3CCF0DBC28D310A1002D18CA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCF0DBB28D310A1002D18CA /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3C406FE628D70F8900678546 /* CryptoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoModel.swift; sourceTree = "<group>"; };
 		3CCF0DB428D310A1002D18CA /* Crypto4FunUIKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Crypto4FunUIKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CCF0DB728D310A1002D18CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3CCF0DB928D310A1002D18CA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 				3CCF0DB728D310A1002D18CA /* AppDelegate.swift */,
 				3CCF0DB928D310A1002D18CA /* SceneDelegate.swift */,
 				3CCF0DBB28D310A1002D18CA /* ViewController.swift */,
+				3C406FE628D70F8900678546 /* CryptoModel.swift */,
 				3CCF0DBD28D310A1002D18CA /* Main.storyboard */,
 				3CD35AF728D5F40400662AC3 /* CryptoCell.swift */,
 				3CCF0DC028D310A1002D18CA /* Assets.xcassets */,
@@ -145,6 +148,7 @@
 				3CCF0DBC28D310A1002D18CA /* ViewController.swift in Sources */,
 				3CCF0DB828D310A1002D18CA /* AppDelegate.swift in Sources */,
 				3CCF0DBA28D310A1002D18CA /* SceneDelegate.swift in Sources */,
+				3C406FE728D70F8900678546 /* CryptoModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

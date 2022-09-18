@@ -56,6 +56,10 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="NAo-0s-F9K"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Cbl-eB-7iU"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -67,6 +71,9 @@
                             <constraint firstItem="UNk-jT-wbG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="xHZ-CJ-mIT"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="UNk-jT-wbG" id="SNy-E5-xgs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
