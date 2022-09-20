@@ -6,14 +6,21 @@
 //
 
 import UIKit
+import Crypto4FunKit
 
 class DetailViewController: UIViewController {
-
 	@IBOutlet weak var imageView: UIImageView!
+	var selectedImage: CryptoCurrencyModel?
+	
+
 	override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+		
+		if let cryptoToLoad = selectedImage {
+			if let urlToLoad = URL(string: cryptoToLoad.image) {
+				imageView.load(url: urlToLoad)
+			}
+		}
     }
     
 
