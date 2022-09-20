@@ -12,13 +12,16 @@ class DetailViewController: UIViewController {
 	@IBOutlet weak var imageView: UIImageView!
 	var selectedImage: CryptoCurrencyModel?
 	
+	@IBOutlet weak var cryptoPrice: UILabel!
 
 	override func viewDidLoad() {
         super.viewDidLoad()
-		
+
+
 		if let cryptoToLoad = selectedImage {
 			if let urlToLoad = URL(string: cryptoToLoad.image) {
 				imageView.load(url: urlToLoad)
+				cryptoPrice.text = String(cryptoToLoad.currentPrice)
 			}
 		}
     }
