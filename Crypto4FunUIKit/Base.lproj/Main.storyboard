@@ -84,7 +84,7 @@
         <!--Detail View Controller-->
         <scene sceneID="QYa-r8-LnF">
             <objects>
-                <viewController storyboardIdentifier="Detail" id="sDf-40-eAC" customClass="DetailViewController" customModule="Crypto4FunUIKit" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailViewController" id="sDf-40-eAC" customClass="DetailViewController" customModule="Crypto4FunUIKit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EgG-ly-KZW">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
