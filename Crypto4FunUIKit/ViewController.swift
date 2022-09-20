@@ -53,7 +53,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		if let vc = storyboard?.instantiateViewController(withIdentifier: "Detail") as? DetailViewController {
-			vc.selectedImage = cryptos[indexPath.row]
+			vc.selectedCrypto = cryptos[indexPath.row]
 			navigationController?.pushViewController(vc, animated: true)
 		}
 	}

@@ -10,7 +10,7 @@ import Crypto4FunKit
 
 class DetailViewController: UIViewController {
 	@IBOutlet weak var imageView: UIImageView!
-	var selectedImage: CryptoCurrencyModel?
+	var selectedCrypto: CryptoCurrencyModel?
 	
 	@IBOutlet weak var cryptoPrice: UILabel!
 
@@ -18,7 +18,7 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
 
 
-		if let cryptoToLoad = selectedImage {
+		if let cryptoToLoad = selectedCrypto {
 			if let urlToLoad = URL(string: cryptoToLoad.image) {
 				imageView.load(url: urlToLoad)
 				cryptoPrice.text = String(cryptoToLoad.currentPrice)
