@@ -80,6 +80,35 @@
             </objects>
             <point key="canvasLocation" x="121.53846153846153" y="-2.1327014218009479"/>
         </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="QYa-r8-LnF">
+            <objects>
+                <viewController storyboardIdentifier="Detail" id="sDf-40-eAC" customClass="DetailViewController" customModule="Crypto4FunUIKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EgG-ly-KZW">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1Rv-zc-ilw">
+                                <rect key="frame" x="75" y="114" width="240" height="128"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="jZZ-Vw-t15"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="1Rv-zc-ilw" firstAttribute="leading" secondItem="jZZ-Vw-t15" secondAttribute="leading" constant="75" id="HtJ-MD-UDB"/>
+                            <constraint firstItem="1Rv-zc-ilw" firstAttribute="top" secondItem="jZZ-Vw-t15" secondAttribute="top" constant="67" id="VdB-2h-Rg0"/>
+                            <constraint firstItem="1Rv-zc-ilw" firstAttribute="centerX" secondItem="EgG-ly-KZW" secondAttribute="centerX" id="q5P-8R-9db"/>
+                            <constraint firstItem="jZZ-Vw-t15" firstAttribute="bottom" secondItem="1Rv-zc-ilw" secondAttribute="bottom" constant="568" id="uSk-oW-qTT"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="1Rv-zc-ilw" id="rjg-e2-Y0W"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lLx-0b-j7G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="900" y="-2"/>
+        </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
