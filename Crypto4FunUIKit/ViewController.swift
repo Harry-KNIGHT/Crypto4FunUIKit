@@ -56,6 +56,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 		if let vc = storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController {
 			vc.selectedCrypto = cryptos[indexPath.row]
 			navigationController?.pushViewController(vc, animated: true)
+			tableView.deselectRow(at: indexPath, animated: true)
 		}
 	}
 }
