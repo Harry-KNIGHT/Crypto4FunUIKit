@@ -50,4 +50,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 			print("Error fetching data")
 		}
 	}
+
+	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		if let vc = storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController {
+			vc.selectedCrypto = cryptos[indexPath.row]
+			navigationController?.pushViewController(vc, animated: true)
+		}
+	}
 }
