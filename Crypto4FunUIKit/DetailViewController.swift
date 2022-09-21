@@ -22,8 +22,10 @@ class DetailViewController: UIViewController {
 			if let urlToLoad = URL(string: cryptoToLoad.image) {
 				imageView.load(url: urlToLoad)
 				cryptoPrice.text = String(cryptoToLoad.currentPrice)
+				self.navigationItem.title = cryptoToLoad.name
 			}
 		}
+
     }
     
 

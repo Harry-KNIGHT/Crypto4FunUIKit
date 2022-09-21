@@ -17,6 +17,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 		super.viewDidLoad()
 		// Do any additional setup after loading the view.
 
+		self.navigationItem.title = "Crypto4Fun"
 		Task {
 			do {
 				try await getCryptos()

@@ -37,6 +37,7 @@
                                                     <rect key="frame" x="8" y="8" width="116" height="116"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="Zkw-cy-fEj" secondAttribute="height" multiplier="1:1" id="BYY-4l-jlT"/>
+                                                        <constraint firstAttribute="height" constant="50" id="FoT-aP-Xc8"/>
                                                     </constraints>
                                                 </imageView>
                                             </subviews>
@@ -103,6 +104,7 @@
                         <viewLayoutGuide key="safeArea" id="jZZ-Vw-t15"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="1Rv-zc-ilw" firstAttribute="top" secondItem="jZZ-Vw-t15" secondAttribute="top" constant="20" id="9vO-0Q-DnM"/>
                             <constraint firstItem="1Rv-zc-ilw" firstAttribute="leading" secondItem="jZZ-Vw-t15" secondAttribute="leading" constant="75" id="HtJ-MD-UDB"/>
                             <constraint firstItem="1Rv-zc-ilw" firstAttribute="top" secondItem="jZZ-Vw-t15" secondAttribute="top" constant="67" id="VdB-2h-Rg0"/>
                             <constraint firstItem="1Rv-zc-ilw" firstAttribute="centerX" secondItem="EgG-ly-KZW" secondAttribute="centerX" id="q5P-8R-9db"/>
