@@ -35,11 +35,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 		let cell = tableView.dequeueReusableCell(withIdentifier: "CryptoCell", for: indexPath) as! CryptoCell
 
 		let currentCrypto = cryptos[indexPath.row]
-		cell.cryptoNameLabel.text = currentCrypto.name
-		if let urlImage = URL(string: currentCrypto.image) {
-			cell.cryptoImageView.load(url: urlImage)
-		}
-		
+		cell.update(with: currentCrypto)
 		return cell
 	}
 
@@ -53,10 +49,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 	}
 
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-		if let vc = storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController {
-			vc.selectedCrypto = cryptos[indexPath.row]
-			navigationController?.pushViewController(vc, animated: true)
-			tableView.deselectRow(at: indexPath, animated: true)
-		}
+		tableView.deselectRow(at: indexPath, animated: true)
+		let selectedCrypto = cryptos[indexPath.row]
+		performSegue(withIdentifier: "DetailSegue", sender: selectedCrypto)
+	}
+
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		guard let detailViewController = segue.destination as? DetailViewController, let selectedCrypto = sender as? CryptoCurrencyModel else { return }
+
+		detailViewController.selectedCrypto = selectedCrypto
 	}
 }
