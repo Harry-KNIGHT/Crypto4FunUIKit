@@ -40,6 +40,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 		return cell
 	}
 
+	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		tableView.deselectRow(at: indexPath, animated: true)
+	}
+	
 	func getCryptos() async throws {
 		do {
 			cryptos = try await CryptoApi.fetchCryptoCurrency()
