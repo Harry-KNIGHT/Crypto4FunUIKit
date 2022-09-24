@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 import Crypto4FunKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
@@ -39,6 +40,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 		return cell
 	}
 
+	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		tableView.deselectRow(at: indexPath, animated: true)
+	}
+	
 	func getCryptos() async throws {
 		do {
 			cryptos = try await CryptoApi.fetchCryptoCurrency()
@@ -48,15 +53,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 		}
 	}
 
-	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-		tableView.deselectRow(at: indexPath, animated: true)
-		let selectedCrypto = cryptos[indexPath.row]
-		performSegue(withIdentifier: "DetailSegue", sender: selectedCrypto)
-	}
-
-	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-		guard let detailViewController = segue.destination as? DetailViewController, let selectedCrypto = sender as? CryptoCurrencyModel else { return }
-
-		detailViewController.selectedCrypto = selectedCrypto
+	// 
+	@IBSegueAction func showCryptoDetailSegueAction(_ coder: NSCoder, sender: Any?) -> UIViewController? {
+		guard let cell = sender as? CryptoCell, let cryptoModel = cell.cryptoModel else { return nil }
+		return CryptoChartViewHostingController(coder: coder, cryptoModel: cryptoModel, detailViewController: DetailViewController())
 	}
 }

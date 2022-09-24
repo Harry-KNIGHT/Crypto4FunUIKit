@@ -27,16 +27,33 @@ class DetailViewController: UIViewController {
 		}
 
     }
-    
 
-    /*
-    // MARK: - Navigation
+	var priceToShowOnShart: [[Double]] = [[Double]]()
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+	var averagePrice: Double {
+		let valueArray = priceToShowOnShart.map { $0[1] }
+		let sum = valueArray.reduce(0, +)
+
+		return sum / Double(valueArray.count)
+	}
+
+	var pricePercentageValue: Double {
+		let priceValue = priceToShowOnShart.map { $0[1] }
+		let longTimePrice = Double(priceValue.first ?? 0)
+		let actualPrice = Double(priceValue.last ?? 0)
+
+		let percentagePrice =  (actualPrice - longTimePrice) / longTimePrice * 100
+
+		return percentagePrice
+	}
+
+	func getChart(_ id: String, from firstDate: Double, to today: Double = Date().timeIntervalSince1970) async throws {
+		do {
+			let data = try await ChartApi.fetchChart(id, from: firstDate)
+			priceToShowOnShart = data.prices
+		} catch {
+			throw error
+		}
+	}
 
 }
