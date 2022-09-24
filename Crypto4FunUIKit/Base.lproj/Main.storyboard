@@ -76,7 +76,7 @@
                                             <outlet property="cryptoNameLabel" destination="pZg-Bt-nuH" id="Izh-MS-eM1"/>
                                             <outlet property="currentPriceLabel" destination="Zom-BW-WWX" id="aNl-L9-skh"/>
                                             <outlet property="variationLabel" destination="1hn-Nm-6Ni" id="POu-Qb-owO"/>
-                                            <segue destination="iWC-MK-xfs" kind="show" identifier="DetailSegue" destinationCreationSelector="segueToSwiftUIDetailView:" id="bFU-rz-7JW"/>
+                                            <segue destination="iWC-MK-xfs" kind="show" identifier="DetailSegue" destinationCreationSelector="showCryptoDetailSegueAction:sender:" id="bFU-rz-7JW"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -107,7 +107,7 @@
         <!--CryptoChartViewController-->
         <scene sceneID="RXj-0Z-LCx">
             <objects>
-                <hostingController storyboardIdentifier="CryptoChartVC" title="CryptoChartViewController" id="iWC-MK-xfs" sceneMemberID="viewController">
+                <hostingController storyboardIdentifier="ChartViewHostingController" title="CryptoChartViewController" id="iWC-MK-xfs" customClass="ChartViewHostingController" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="MzT-j1-zzg"/>
                 </hostingController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Az-Kk-s0c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

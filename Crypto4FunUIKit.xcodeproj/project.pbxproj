@@ -10,6 +10,7 @@
 		3C1F2F7B28D7AC8D007783C0 /* Crypto4FunKit in Frameworks */ = {isa = PBXBuildFile; productRef = 3C1F2F7A28D7AC8D007783C0 /* Crypto4FunKit */; };
 		3C1F2F7D28D7AD99007783C0 /* ExtensionUIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1F2F7C28D7AD99007783C0 /* ExtensionUIImageView.swift */; };
 		3C289CF428DDF83B00E4ED31 /* CryptoChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C289CF328DDF83B00E4ED31 /* CryptoChartView.swift */; };
+		3C46E25228DF3CF9007C9A84 /* ChartViewHostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C46E25128DF3CF9007C9A84 /* ChartViewHostingController.swift */; };
 		3C67ACD128D9AD2B0044925B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C67ACD028D9AD2B0044925B /* DetailViewController.swift */; };
 		3CCF0DB828D310A1002D18CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCF0DB728D310A1002D18CA /* AppDelegate.swift */; };
 		3CCF0DBA28D310A1002D18CA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCF0DB928D310A1002D18CA /* SceneDelegate.swift */; };
@@ -23,6 +24,7 @@
 /* Begin PBXFileReference section */
 		3C1F2F7C28D7AD99007783C0 /* ExtensionUIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIImageView.swift; sourceTree = "<group>"; };
 		3C289CF328DDF83B00E4ED31 /* CryptoChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoChartView.swift; sourceTree = "<group>"; };
+		3C46E25128DF3CF9007C9A84 /* ChartViewHostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewHostingController.swift; sourceTree = "<group>"; };
 		3C67ACD028D9AD2B0044925B /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		3CCF0DB428D310A1002D18CA /* Crypto4FunUIKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Crypto4FunUIKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CCF0DB728D310A1002D18CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 				3CCF0DB728D310A1002D18CA /* AppDelegate.swift */,
 				3CCF0DB928D310A1002D18CA /* SceneDelegate.swift */,
 				3CCF0DBB28D310A1002D18CA /* ViewController.swift */,
+				3C46E25128DF3CF9007C9A84 /* ChartViewHostingController.swift */,
 				3C67ACD028D9AD2B0044925B /* DetailViewController.swift */,
 				3C1F2F7C28D7AD99007783C0 /* ExtensionUIImageView.swift */,
 				3CCF0DBD28D310A1002D18CA /* Main.storyboard */,
@@ -162,6 +165,7 @@
 				3CD35AF828D5F40400662AC3 /* CryptoCell.swift in Sources */,
 				3CCF0DBC28D310A1002D18CA /* ViewController.swift in Sources */,
 				3C67ACD128D9AD2B0044925B /* DetailViewController.swift in Sources */,
+				3C46E25228DF3CF9007C9A84 /* ChartViewHostingController.swift in Sources */,
 				3CCF0DB828D310A1002D18CA /* AppDelegate.swift in Sources */,
 				3CCF0DBA28D310A1002D18CA /* SceneDelegate.swift in Sources */,
 				3C289CF428DDF83B00E4ED31 /* CryptoChartView.swift in Sources */,

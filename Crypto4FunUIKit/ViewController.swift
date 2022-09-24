@@ -53,7 +53,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 		}
 	}
 
-	@IBSegueAction func segueToSwiftUIDetailView(_ coder: NSCoder) -> UIViewController? {
-		return UIHostingController(coder: coder, rootView: CryptoChartView(crypto: .cryptoSample))
+	// 
+	@IBSegueAction func showCryptoDetailSegueAction(_ coder: NSCoder, sender: Any?) -> UIViewController? {
+		guard let cell = sender as? CryptoCell, let cryptoModel = cell.cryptoModel else { return nil }
+		return CryptoChartViewHostingController(coder: coder, cryptoModel: cryptoModel)
 	}
 }

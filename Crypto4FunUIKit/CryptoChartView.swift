@@ -7,11 +7,6 @@
 
 import SwiftUI
 import Crypto4FunKit
-class SwiftUIViewHostingController: UIHostingController<CryptoChartView> {
-	required init?(coder aDecoder: NSCoder) {
-		super.init(coder: aDecoder, rootView: CryptoChartView(crypto: .cryptoSample))
-	}
-}
 
 struct CryptoChartView: View {
 	let crypto: CryptoCurrencyModel
