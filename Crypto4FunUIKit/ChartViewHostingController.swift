@@ -10,10 +10,12 @@ import Crypto4FunKit
 
 class CryptoChartViewHostingController: UIHostingController<CryptoChartView> {
 	private let cryptoModel: CryptoCurrencyModel
+	private let detailViewController: DetailViewController
 
-	required init?(coder: NSCoder, cryptoModel: CryptoCurrencyModel) {
+	required init?(coder: NSCoder, cryptoModel: CryptoCurrencyModel, detailViewController: DetailViewController) {
 		self.cryptoModel = cryptoModel
-		super.init(coder: coder, rootView: CryptoChartView(crypto: cryptoModel))
+		self.detailViewController = detailViewController
+		super.init(coder: coder, rootView: CryptoChartView(cryptoCurrency: cryptoModel, detailViewController: detailViewController))
 	}
 
 	required init?(coder: NSCoder) {

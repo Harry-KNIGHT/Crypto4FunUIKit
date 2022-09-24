@@ -19,6 +19,7 @@
 		3CCF0DC128D310A1002D18CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CCF0DC028D310A1002D18CA /* Assets.xcassets */; };
 		3CCF0DC428D310A1002D18CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CCF0DC228D310A1002D18CA /* LaunchScreen.storyboard */; };
 		3CD35AF828D5F40400662AC3 /* CryptoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD35AF728D5F40400662AC3 /* CryptoCell.swift */; };
+		3CD4D8AB28DF844D000AB9AB /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CD4D8AA28DF844D000AB9AB /* DateExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		3CCF0DC328D310A1002D18CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3CCF0DC528D310A1002D18CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3CD35AF728D5F40400662AC3 /* CryptoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoCell.swift; sourceTree = "<group>"; };
+		3CD4D8AA28DF844D000AB9AB /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 				3C1F2F7C28D7AD99007783C0 /* ExtensionUIImageView.swift */,
 				3CCF0DBD28D310A1002D18CA /* Main.storyboard */,
 				3C289CF328DDF83B00E4ED31 /* CryptoChartView.swift */,
+				3CD4D8AA28DF844D000AB9AB /* DateExtension.swift */,
 				3CD35AF728D5F40400662AC3 /* CryptoCell.swift */,
 				3CCF0DC028D310A1002D18CA /* Assets.xcassets */,
 				3CCF0DC228D310A1002D18CA /* LaunchScreen.storyboard */,
@@ -165,6 +168,7 @@
 				3CD35AF828D5F40400662AC3 /* CryptoCell.swift in Sources */,
 				3CCF0DBC28D310A1002D18CA /* ViewController.swift in Sources */,
 				3C67ACD128D9AD2B0044925B /* DetailViewController.swift in Sources */,
+				3CD4D8AB28DF844D000AB9AB /* DateExtension.swift in Sources */,
 				3C46E25228DF3CF9007C9A84 /* ChartViewHostingController.swift in Sources */,
 				3CCF0DB828D310A1002D18CA /* AppDelegate.swift in Sources */,
 				3CCF0DBA28D310A1002D18CA /* SceneDelegate.swift in Sources */,

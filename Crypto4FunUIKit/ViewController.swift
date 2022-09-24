@@ -56,6 +56,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 	// 
 	@IBSegueAction func showCryptoDetailSegueAction(_ coder: NSCoder, sender: Any?) -> UIViewController? {
 		guard let cell = sender as? CryptoCell, let cryptoModel = cell.cryptoModel else { return nil }
-		return CryptoChartViewHostingController(coder: coder, cryptoModel: cryptoModel)
+		return CryptoChartViewHostingController(coder: coder, cryptoModel: cryptoModel, detailViewController: DetailViewController())
 	}
 }
