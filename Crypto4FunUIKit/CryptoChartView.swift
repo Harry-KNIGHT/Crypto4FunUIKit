@@ -16,7 +16,7 @@ struct CryptoChartView: View {
 
 	@State private var epochTimeToShowSelected: EpochUnixTime = .month
 	public let detailViewController: DetailViewController
-
+	@State private var isTaskLoaded: Bool = false
 	var body: some View {
 		ScrollView(.vertical, showsIndicators: false) {
 			VStack(alignment: .leading) {
@@ -41,6 +41,7 @@ struct CryptoChartView: View {
 				.task {
 						do {
 							try await detailViewController.getChart(cryptoCurrency.id, from: Date().timeIntervalSince1970 - EpochUnixTime.month.rawValue)
+							isTaskLoaded = true
 
 						} catch {
 							print("Error \(error.localizedDescription)")
@@ -53,15 +54,16 @@ struct CryptoChartView: View {
 						}
 					}
 				})
-				Picker("Select time value", selection: $epochTimeToShowSelected) {
-					ForEach(EpochUnixTime.allCases, id: \.self) { value in
-						Text(String(value.name))
-							.tag(value)
+				if isTaskLoaded {
+					Picker("Select time value", selection: $epochTimeToShowSelected) {
+						ForEach(EpochUnixTime.allCases, id: \.self) { value in
+							Text(String(value.name))
+								.tag(value)
+						}
 					}
+					.pickerStyle(.segmented)
+					.padding([.vertical, .horizontal])
 				}
-				.pickerStyle(.segmented)
-				.padding([.vertical, .horizontal])
-
 				Divider()
 					.padding(.horizontal,40)
 				ToggleAveragePriceView(showAveragePrice: $showAveragePrice)
