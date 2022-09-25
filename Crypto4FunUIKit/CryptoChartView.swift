@@ -20,6 +20,11 @@ struct CryptoChartView: View {
 	var body: some View {
 		ScrollView(.vertical, showsIndicators: false) {
 			VStack(alignment: .leading) {
+				Text("$\(String(cryptoCurrency.currentPrice.formatted()))")
+					.font(.title.bold())
+					.padding([.top, .leading], 8)
+					.padding(.bottom, 0)
+
 				Chart {
 					ForEach(detailViewController.priceToShowOnShart, id: \.self) {
 						LineMark(
