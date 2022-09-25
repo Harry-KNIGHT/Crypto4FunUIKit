@@ -37,6 +37,6 @@ class CryptoCell: UITableViewCell {
 		self.variationLabel.text = String(crypto.priceChangePercentage24h)
 		self.variationLabel.textColor = UIColor(crypto.priceChangePercentage24h > 0 ? .green : .red)
 
-		self.currentPriceLabel.text = String(crypto.currentPrice)
+		self.currentPriceLabel.text = ("$\(String(crypto.currentPrice.formatted()))")
 	}
 }
